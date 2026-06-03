@@ -1,0 +1,58 @@
+.button {
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+  padding: 0;
+  border: 0 solid;
+}
+.icon {
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  padding: 0.8rem 0 0.5rem;
+  transition: all 1s ease;
+}
+.icon > span {
+  width: 3px;
+  height: 100%;
+  border-radius: 1px;
+  margin: 0 1.5px;
+  transform-origin: bottom;
+  transition: all 1s ease;
+}
+.icon > span:nth-of-type(2) {
+  animation-delay: -2.2s;
+  transition: all 1s ease;
+}
+.icon > span:nth-of-type(3) {
+  animation-delay: -3.7s;
+  transition: all 1s ease;
+}
+.pausedicon > span {
+  transform: scaleY(0.05);
+  margin-top: auto !important;
+  transition: all 1s ease;
+}
+.playingicon > span {
+  animation: myBounce 2.2s ease infinite;
+  transform: scaleY(1);
+  transition: all 1s ease;
+}
+@keyframes myBounce {
+  10% {
+    transform: scaleY(0.25);
+  }
+  30% {
+    transform: scaleY(0.83);
+  }
+  60% {
+    transform: scaleY(0.42);
+  }
+  80% {
+    transform: scaleY(0.625);
+  }
+  100% {
+    transform: scaleY(0.5);
+  }
+}
